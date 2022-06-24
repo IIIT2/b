@@ -68,7 +68,7 @@ async def skip(client, m: Message):
         else:
             await m.reply_photo(
                 photo=f"{IMG_3}",
-                caption=f"⏭ **🤼لك عاش ابشر تم التخطي .**\n\n❤️‍🔥 °→ **الاسم:** [{op[0]}]({op[1]})\n❤️‍🔥 → **الدردشة:** `{chat_id}`\n❤️‍🔥 → **طلب من الحلو:** {m.from_user.mention()}",
+                caption=f"⏭ **🤼ابشر تم التخطي .**\n\n❤️‍🔥 °→ **الاسم:** [{op[0]}]({op[1]})\n❤️‍🔥 → **الدردشة:** `{chat_id}`\n❤️‍🔥 → **طلب من الحلو:** {m.from_user.mention()}",
                 reply_markup=keyboard,
             )
     else:
@@ -100,7 +100,7 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ لك عاش ابشر تم الايقاف حب.")
+            await m.reply("تم حيلي وكفت الاغنيه ❤️‍🔥.")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
